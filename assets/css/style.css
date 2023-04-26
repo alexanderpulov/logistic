@@ -105,6 +105,16 @@ ul, ol {
 
 
 
+/* Burger ======================================================= */
+.burger {
+    display: none;
+    padding: 0;
+    background: none;
+    border: 0;
+}
+
+
+
 /* Intro ======================================================= */
 .intro {
     background: #000 url("../images/banner_pc.jpg") no-repeat center;
@@ -366,6 +376,7 @@ ul, ol {
 .services {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     padding: 30px 0 50px;
     background-color: #fff;
     border-radius: 5px;
@@ -736,9 +747,8 @@ ul, ol {
 /* Articles ======================================================= */
 .articles {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin: 0 -15px 30px;;
 }
 
 .articles--column {
@@ -754,6 +764,7 @@ ul, ol {
     width: 100%;
     max-width: 500px;
     margin-bottom: 20px;
+    padding: 0 15px;
 }
 
 .articles__title {
@@ -988,4 +999,271 @@ ul, ol {
 .text ol {
     list-style: decimal;
     list-style-position: inside;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media ======================================================= */
+
+@media (max-width: 991px) {
+
+    /* Intro */
+    .intro__title {
+        font-size: 90px;
+    }
+
+    /* Section */
+    .section__title {
+        text-align: center;
+    }
+
+    /* Services */
+    .services__item {
+        width: 50%;
+    }
+
+    /* Clients */
+    .clients {
+        flex-direction: column;
+    }
+
+    .clients__logos,
+    .clients__reviews {
+        width: 100%;
+    }
+
+    .clients__list li {
+        max-width: 130px;
+    }
+
+    /* Footer */
+    .footer {
+        background-size: 350px auto;
+    }
+}
+
+
+@media (max-width: 767px) {
+    
+    /* Header */
+    .header__inner {
+        height: 50px;
+    }
+    
+    /* Nav */
+    .nav {
+        display: none;
+        width: 100%;
+        height: auto;
+        min-height: calc(100vh - 50px);
+        padding-top: 9px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, .85);
+    }
+
+    .nav__link {
+        display: block;
+        padding: 10px 15px;
+        text-align: right;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    /* Intro */
+    .intro {
+        margin-bottom: 0;
+    }
+
+    .intro__inner {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding-top: 75px;
+        padding-bottom: 25px;
+    }
+
+    .intro--text {
+        order: 1;
+        margin-top: 30px;
+        margin-bottom: 25px;
+        width: 100%;
+    }
+
+    /* Request form */
+    .request-form--intro {
+        order: 2;
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    /* Benefits */
+    .benefits {
+        flex-direction: column;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .benefits__col {
+        width: 100%;
+    }
+
+    .benefits-list {
+        margin-bottom: 30px;
+        max-width: none;
+    }
+
+    /* Team */
+    .team {
+        flex-direction: column;
+    }
+
+    .team__col {
+        width: 100%;
+    }
+
+    .team__col:last-child {
+        margin-bottom: 0;
+    }
+
+    .team__item {
+        max-width: 370px;
+        margin: 0 auto;
+    }
+
+    /* Mission */
+    .mission {
+        margin-top: -16px;
+        padding: 40px 20px;
+    }
+
+    .mission-title {
+        font-size: 70px;
+    }
+
+    .mission__title {
+        font-size: 24px;
+    }
+
+    .mission__subtitle {
+        font-size: 18px;
+    }
+
+    /* Articles */
+    .articles {
+        flex-wrap: wrap;
+    }
+
+    .articles__item {
+        max-width: none;
+    }
+
+    /* Footer */
+    .footer {
+        background-size: 250px auto;
+        background-position: 
+        left -50px bottom -30px, 
+        right -50px bottom -30px;
+    }
+
+    
+}
+
+@media (max-width: 575px) {
+    .intro__title {
+        font-size: 60px;
+    }
+
+    /* Services */
+    .services__main-title {
+        font-size: 50px;
+    }
+
+    .services__item {
+        width: 100%;
+    }
+
+
+    /* Section */
+    .section {
+        padding: 30px 0;
+    }
+
+    .section__title {
+        font-size: 35px;
+    }
+
+    /* Request form */
+    .request-form__header,
+    .request-form__content {
+        padding: 20px;
+    }
+
+    .request-form__title {
+        font-size: 25px;
+    }
+
+    /* Clients */
+    .clients__list li {
+        max-width: none;
+        width: 30%;
+        margin-right: 0
+        padding: 0 15px;
+    }
+
+    .clients__list li img {
+        margin: 0 auto;
+    }
+
+    /* Mission */
+    .mission {
+        margin-top: -10px;
+        padding: 30px 20px;
+    }
+
+    .mission-title {
+        font-size: 40px;
+    }
+
+    .mission__title {
+        font-size: 20px;
+    }
+
+    .mission__subtitle {
+        font-size: 16px;
+    }
+
+    /* Footer */
+    .footer {
+        background-size: 200px auto;
+    }
 }
