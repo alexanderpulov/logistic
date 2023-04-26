@@ -5,6 +5,8 @@ body {
     font-size: 15px;
     line-height: 1.4;
     color: #585858;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body.no-scroll {
@@ -854,9 +856,12 @@ ul, ol {
 .modal {
     display: none;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     height: 100%;
+    padding: 15px;
+    overflow: auto;
+
     background-color: rgba(0, 0, 0, .9);
 
     position: fixed;
@@ -873,8 +878,10 @@ ul, ol {
     position: relative;
 
     background-color: #fff;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     padding: 25px;
+    margin-top: 80px;
 }
 
 .modal__header {
@@ -1035,6 +1042,11 @@ ul, ol {
         font-size: 90px;
     }
 
+    .intro--blog,
+    .intro--text {
+        height: 250px;
+    }
+
     /* Section */
     .section__title {
         text-align: center;
@@ -1062,6 +1074,20 @@ ul, ol {
     /* Footer */
     .footer {
         background-size: 350px auto;
+    }
+
+    /* Main */
+    .main {
+        flex-direction: column;
+    }
+
+    .main__col {
+        width: 100%;
+    }
+
+    /* Request form */
+    .request-form--right {
+        margin: 30px auto 0;
     }
 }
 
@@ -1114,7 +1140,6 @@ ul, ol {
 
     .intro--text {
         order: 1;
-        margin-top: 30px;
         margin-bottom: 25px;
         width: 100%;
     }
@@ -1265,5 +1290,15 @@ ul, ol {
     /* Footer */
     .footer {
         background-size: 200px auto;
+    }
+
+    /* Modal */
+    .modal__inner {
+        padding: 15px;
+    }
+
+    .modal__close {
+        right: 0;
+        top: -30px;
     }
 }
