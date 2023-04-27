@@ -12,17 +12,18 @@
 <body>
 
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="header__inner">
-                <a class="img" href="index.html"><img src="assets/images/logo.svg" alt="CenterLogistic"></a>
+                <a class="img" href="#" data-scroll="#intro"><img src="assets/images/logo.svg" alt="CenterLogistic"></a>
 
-                <nav class="nav">
-                    <a class="nav__link" href="#">Services</a>
-                    <a class="nav__link" href="#">Clients</a>
-                    <a class="nav__link" href="#">Benefits</a>
-                    <a class="nav__link" href="#">Team</a>
-                    <a class="nav__link" href="#">News</a>
+                <nav class="nav" id="nav">
+                    <a class="nav__link" href="#" data-scroll="#services">Services</a>
+                    <a class="nav__link" href="#" data-scroll="#clients">Clients</a>
+                    <a class="nav__link" href="#" data-scroll="#benefits">Benefits</a>
+                    <a class="nav__link" href="#" data-scroll="#team">Team</a>
+                    <a class="nav__link" href="#" data-scroll="#mission">Mission</a>
+                    <a class="nav__link" href="#" data-scroll="#news">News</a>
                     <a class="nav__link" href="#">Contact Us</a>
                 </nav>
 
@@ -36,7 +37,7 @@
 
 
     <!-- Intro -->
-    <div class="intro">
+    <div class="intro" id="intro">
         <div class="container">
             <div class="intro__inner">
 
@@ -76,7 +77,7 @@
 
 
     <!-- Services -->
-    <section class="section">
+    <section class="section" id="services" data-scrollspy="#services">
         <div class="container">
             <div class="services">
                 <h2 class="services__main-title">Services</h2>
@@ -128,7 +129,7 @@
 
 
     <!-- Client -->
-    <section class="section section--map">
+    <section class="section section--map" id="clients" data-scrollspy="#clients">
         <div class="container">
             <h2 class="section__title">
                 <span>Our</span> clients
@@ -207,7 +208,7 @@
 
 
     <!-- Benefits -->
-    <section class="section">
+    <section class="section" id="benefits" data-scrollspy="#benefits">
         <div class="container">
             <h2 class="section__title"><span>Our</span> Benefits</h2>
             <div class="benefits">
@@ -249,7 +250,7 @@
 
 
     <!-- Team -->
-    <section class="section section--gray">
+    <section class="section section--gray" id="team" data-scrollspy="#team">
         <div class="container">
             <h2 class="section__title"><span>Our</span>team</h2>
 
@@ -315,7 +316,7 @@
 
 
     <!-- Mission -->
-    <section class="section">
+    <section class="section" id="mission" data-scrollspy="#mission">
         <div class="container">
             <h2 class="mission-title">OUR MISSION</h2>
             <div class="mission">
@@ -331,7 +332,7 @@
 
 
     <!-- Articles -->
-    <section class="section">
+    <section class="section" id="news" data-scrollspy="#news">
         <div class="container">
             <h2 class="section__title"><span>Interesting</span> to read</h2>
 
@@ -358,7 +359,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <a href="index.html">
+            <a href="#" data-scroll="#intro">
                 <img src="assets/images/logo-black.svg" alt="">
             </a>
             <address class="footer__contacts">
@@ -439,6 +440,12 @@
             </button>
         </div>
     </div>
+
+
+    <!-- JavaScript -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.4.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
 
 </body>
 </html>
