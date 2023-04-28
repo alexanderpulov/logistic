@@ -1,5 +1,24 @@
 $(function() {
 
+    // Nav Toggle on mobile
+
+    let navToggle = $('#navToggle');
+    let nav = $('#nav');
+
+    navToggle.on('click', function(event) {
+        event.preventDefault();
+        nav.toggleClass('show');
+    });
+
+
+
+
+
+
+
+
+
+
     let intro = $("#intro");
     let header = $("#header");
     let introH = intro.innerHeight();
