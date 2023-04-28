@@ -119,6 +119,10 @@ ul, ol {
     border: 0;
 }
 
+.burger:focus {
+    outline: none;
+}
+
 
 
 /* Intro ======================================================= */
@@ -1147,6 +1151,10 @@ ul, ol {
         z-index: 1;
         flex-direction: column;
         background-color: rgba(0, 0, 0, .85);
+    }
+
+    .nav.show {
+        display: block;
     }
 
     .nav__link {
